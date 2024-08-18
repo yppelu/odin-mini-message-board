@@ -12,12 +12,12 @@ const PORT = 5000;
 const app = (0, express_1.default)();
 app.set('view engine', 'ejs');
 app.set('views', node_path_1.default.join(__dirname, 'views'));
-app.use(express_1.default.static(node_path_1.default.join(__dirname, 'public')));
+app.use('/', express_1.default.static(node_path_1.default.join(__dirname, 'public')));
 app.use(express_1.default.urlencoded({ extended: true }));
 app.use('/', indexRouter_1.default);
 app.use('/new', newMessageFormRouter_1.default);
 app.get('*', (req, res) => {
-    res.render('./pages/404');
+    res.sendFile(node_path_1.default.join(__dirname, 'public', 'html', '404.html'));
 });
 app.use(errorHandler_1.default);
 app.listen(PORT, () => 'Server is running');
