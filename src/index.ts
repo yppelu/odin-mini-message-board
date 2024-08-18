@@ -15,4 +15,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/', indexRouter);
 app.use('/new', newMessageFormRouter);
 
+app.get('*', (req, res) => {
+  res.render('./pages/404');
+});
+
 app.listen(PORT, () => 'Server is running');
