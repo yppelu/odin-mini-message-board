@@ -2,6 +2,7 @@ import path from 'node:path';
 import express from 'express';
 import indexRouter from './routes/indexRouter';
 import newMessageFormRouter from './routes/newMessageFormRouter';
+import errorHandler from './controllers/errorHandler';
 
 const PORT = 5000;
 const app = express();
@@ -18,5 +19,7 @@ app.use('/new', newMessageFormRouter);
 app.get('*', (req, res) => {
   res.render('./pages/404');
 });
+
+app.use(errorHandler);
 
 app.listen(PORT, () => 'Server is running');
