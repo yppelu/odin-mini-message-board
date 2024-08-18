@@ -7,7 +7,7 @@
     "prebuild": "rm -rf ./dist/public ./dist/views",
     "build": "tsc --build && cp -r ./src/views ./dist/views && cp -r ./src/public ./dist/public",
     "start:prod": "node ./dist/index.js",
-    "start:dev": "node ./src/index.ts"
+    "start:dev": "ts-node ./src/index.ts"
   },
   "repository": {
     "type": "git",
