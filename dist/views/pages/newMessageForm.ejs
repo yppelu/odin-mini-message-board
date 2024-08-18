@@ -1,0 +1,18 @@
+<%- include('../partials/head') %>
+<main class="main">
+  <form class="new-message-form" method="POST" action="/new">
+    <label class="new-message-form__label">
+      Username:
+      <input class="new-message-form__input" type="text" name="user" required />
+    </label>
+    <label class="new-message-form__label">
+      Text:
+      <textarea class="new-message-form__input" name="text" rows="5"
+        required></textarea>
+    </label>
+    <button class="new-message-form__submit-button" type="submit">
+      Add message
+    </button>
+  </form>
+</main>
+<%- include('../partials/footer') %>
