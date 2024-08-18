@@ -3,9 +3,9 @@
 <main class="main">
   <a class="main__add-message-link" href="/new">Add Message</a>
   <div class="messages">
-    <% messages.forEach(message => { %>
-    <%- include('../partials/message', {message: message}) %>
-    <% }); %>
+    <% for (let i = messages.length - 1; i >= 0; i--) { %>
+    <%- include('../partials/message', {message: messages[i]}); %>
+    <% }; %>
   </div>
 </main>
 

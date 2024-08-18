@@ -6,7 +6,7 @@ const newMessageFormController = {
     res.render('./pages/newMessageForm.ejs', { title: 'Add New Message' });
   },
   post(req: Request, res: Response) {
-    addMessage(req.body.user, req.body.text);
+    addMessage(req.body.text, req.body.user);
     res.redirect('/');
   }
 };
