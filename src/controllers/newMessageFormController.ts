@@ -2,7 +2,7 @@ import { Request, Response } from 'express-serve-static-core';
 
 const newMessageFormController = {
   get(req: Request, res: Response) {
-    res.render('./pages/newMessageForm.ejs');
+    res.render('./pages/newMessageForm.ejs', { title: 'Add New Message' });
   },
   post(req: Request, res: Response) {
     res.end();
