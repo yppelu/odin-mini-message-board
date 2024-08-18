@@ -1,0 +1,23 @@
+{
+  "name": "odin-mini-message-board",
+  "version": "1.0.0",
+  "description": "Solution to the TOP's Node path, Node.js course, project Mini Message Board.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yppelu/odin-mini-message-board.git"
+  },
+  "author": "yppelu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yppelu/odin-mini-message-board/issues"
+  },
+  "homepage": "https://github.com/yppelu/odin-mini-message-board#readme",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2"
+  }
+}
