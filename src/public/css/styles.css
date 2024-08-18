@@ -68,15 +68,17 @@ body {
 }
 
 .header {
+  background-color: #FFFFFF;
   box-shadow: 0.05rem 0.05rem 0.25rem -0.05rem var(--primary-dark-color);
+
   display: flex;
   justify-content: center;
 
-  padding: 0.5rem 0;
+  padding: 0.5rem 1rem;
 }
 
 .header__title {
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 500;
 }
 
@@ -94,6 +96,7 @@ body {
 .main__add-message-link {
   appearance: none;
   background-color: var(--secondary-dark-color);
+  border: none;
   border-radius: 0.4rem;
   color: var(--primary-light-color);
 
@@ -101,7 +104,6 @@ body {
 
   align-self: flex-start;
 
-  border: 1px solid var(--primary-light-color);
   padding: 0.35rem 0.75rem;
 }
 
@@ -135,4 +137,51 @@ body {
 .message__added {
   font-size: 0.85rem;
   font-style: italic;
+}
+
+.new-message-form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-self: center;
+
+  max-width: 800px;
+  width: 100%;
+}
+
+.new-message-form__label {
+  color: var(--secondary-dark-color);
+  font-weight: 500;
+
+  width: 100%;
+}
+
+.new-message-form__input {
+  appearance: none;
+  background-color: #FFFFFF;
+  border-radius: 0.25rem;
+
+  border: 1px solid var(--primary-dark-color);
+  padding: 0.25rem 0.5rem;
+  width: 100%;
+}
+
+.new-message-form__submit-button {
+  appearance: none;
+  background-color: var(--secondary-dark-color);
+  border: none;
+  border-radius: 0.4rem;
+  color: var(--primary-light-color);
+  cursor: pointer;
+
+  transition: opacity 0.1s ease-in-out;
+
+  align-self: flex-start;
+
+  padding: 0.35rem 0.75rem;
+}
+
+.new-message-form__submit-button:active {
+  opacity: 0.9;
 }
