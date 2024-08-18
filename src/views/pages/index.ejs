@@ -1,0 +1,12 @@
+<%- include('../partials/head') %>
+
+<main class="main">
+  <a class="main__add-message-link" href="/new">Add Message</a>
+  <div class="messages">
+    <% messages.forEach(message => { %>
+    <%- include('../partials/message', {message: message}) %>
+    <% }); %>
+  </div>
+</main>
+
+<%- include('../partials/footer') %>
